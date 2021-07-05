@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+
+	</head>
+	<body onload="show()">
+	
+	<script>
+	function show(){
+	
+	var counter =1;
+	while (localStorage.getItem("order"+counter) !== null) {
+	document.write(localStorage.getItem("order"+counter));
+	document.write("<br>");
+	document.write("- The Customer Name : " + localStorage.getItem("Cfullname"+counter) + "<br>");
+	document.write("- The Customer House Number : " + localStorage.getItem("CHouse"+counter) + "<br>");
+	document.write("- The Customer Road Number : " + localStorage.getItem("CRoad"+counter) + "<br>");
+	document.write("- The Customer Block Number : " + localStorage.getItem("CBlock"+counter) + "<br>");
+	document.write("<hr>");
+	var i = String(counter);
+	var b = i +1;
+	counter = b;
+	
+	}
+
+	}
+	
+ </script>
+	
+	</body>
+	</html>

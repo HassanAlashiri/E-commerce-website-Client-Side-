@@ -1,0 +1,146 @@
+html, body {
+	height: 100%;
+	min-height: 100%;
+	background-image:url("../images/backgroundlogin.jpg");
+
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+#products ul {
+	margin: 1.5em 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+
+#products li {
+	float: left;
+	width: 31%;
+	margin: 0 1%;
+	display: block;
+}
+.product-image {
+	margin: 0 auto 1em auto;
+	background: #000;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border-radius: 50%;
+	
+}
+
+.btn, a.btn {
+	display: inline-block;
+	background: #cc1400;
+	color: #fff;
+	font: 1em 'PT Serif', serif;
+	padding: 0.3em 1em;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #a00;
+	
+}
+
+.confirm{
+	display: inline-block;
+	background: #cc1400;
+	color: #fff;
+	font: 1em 'PT Serif', serif;
+	padding: 0.3em 1em;
+	text-align: center;
+	border-radius: 9px;
+	border: 1px solid #a00;
+	   width: 70px;
+        height: 30px;
+	
+}
+div,p{
+	text-align: center;
+
+
+}
+
+.product-description {
+	padding: 1em;
+	background: #000;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.product-name {
+	text-align: center;
+	color: #fc0;
+	margin: 0;
+	font-size: 1.4em;
+	padding-bottom: 0.2em;
+	border-bottom: 1px dotted #666;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+.product-price {
+	width: 4em;
+	height: 4em;
+	font-size: 1.2em;
+	text-align: center;
+	margin: 1em auto;
+	background: #fff;
+	color: #800;
+	line-height: 4;
+	border-radius: 50%;
+}
+
+form.add-to-cart div,
+form.add-to-cart p {
+	text-align: center;
+}
+ #myBtn {
+        position: fixed;
+        bottom: 10px;
+        float: right;
+        right: 18.5%;
+        left: 77.25%;
+        max-width: 30px;
+        width: 100%;
+        font-size: 12px;
+        border-color: rgba(85, 85, 85, 0.2);
+        background-color: rgb(100,100,100);
+        padding: .5px;
+        border-radius: 4px;
+
+    }
+	 #bottom {
+        position: fixed;
+        bottom: 10px;
+        float: right;
+        right: 30.5%;
+        left: 20.25%;
+        max-width: 30px;
+        width: 100%;
+        font-size: 12px;
+        border-color: rgba(85, 85, 85, 0.2);
+        background-color: rgb(100,100,100);
+        padding: .5px;
+        border-radius: 4px;
+
+    }
+/*On Hover Color Change*/
+    #myBtn:hover {
+        background-color: #7dbbf1;
+    }
+	table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td{
+	font-weight: bold;
+	text-align:center;
+	font-size:15px;
+  height: 70px;
+}

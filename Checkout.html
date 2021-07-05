@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="CSS/main.css" media="screen" type="text/css" />
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+	<link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      <li><a href="order.html"><span class="glyphicon glyphicon-glass"></span> <span class="glyphicon glyphicon-apple"></span> Order</a></li>
+      <li><a href="contactus.html"><span class="glyphicon glyphicon-envelope"></span> Contact us</a></li>
+	  <li><a href="about.html"> <span class="glyphicon glyphicon-exclamation-sign"></span> About</a></li>
+    </ul>
+  </div>
+</nav>
+<div style="text-align:center;">
+<h2> Dear <div id="fullname"></div> </h2>
+<h2>Your Order : </h2>
+	<div id="ordertable"></div>
+	<br>
+	<h2>Your Address :</h2>
+	<br>
+	<address>
+	<p> Your House Number :</p> <div id="housenumber"></div>
+	<p> Your Road Number :</p> <div id="roadnumber"></div>
+	<p> Your Block Number :</p> <div id="blocknumber"></div>
+	</address>
+</head>
+<body onload="displayall();">
+<h2> Your Payment Method : </h2>
+<input type="radio" name="paymentmethod" value="Cash" id="cash" checked="true" /> Cash<br>
+<input type="radio" name="paymentmethod" value="Card" id="card" /> Credit/Debit Card<br>
+<br>
+<button name="Submit" id="submittheorder" class="btn" >Submit</button>
+</div>
+
+<script>
+
+	function displayall(){
+	document.getElementById('ordertable').innerHTML = (sessionStorage.getItem("order"));
+	document.getElementById('fullname').innerHTML = (sessionStorage.getItem("Cfullname"));
+	document.getElementById('housenumber').innerHTML = (sessionStorage.getItem("CHouse"));
+	document.getElementById('roadnumber').innerHTML = (sessionStorage.getItem("CRoad"));
+	document.getElementById('blocknumber').innerHTML = (sessionStorage.getItem("CBlock"));
+	}
+	document.getElementById('submittheorder').onclick = function() {
+	if (localStorage.getItem("id") === null) {
+	localStorage.setItem("id", 1);
+   var i = localStorage.getItem("id");
+   localStorage.setItem("order" + i, (sessionStorage.getItem("order")));
+   localStorage.setItem("Cfullname" + i, (sessionStorage.getItem("Cfullname")));
+   localStorage.setItem("CHouse" +i, (sessionStorage.getItem("CHouse")));
+   localStorage.setItem("CRoad" +i, (sessionStorage.getItem("CRoad")));
+   localStorage.setItem("CBlock" +i, (sessionStorage.getItem("CBlock")));
+   }else{
+   var b = localStorage.getItem("id")
+   var i = (b+1);
+   localStorage.setItem("id", i);
+     localStorage.setItem("order" + i, (sessionStorage.getItem("order")));
+   localStorage.setItem("Cfullname" + i, (sessionStorage.getItem("Cfullname")));
+   localStorage.setItem("CHouse" +i, (sessionStorage.getItem("CHouse")));
+   localStorage.setItem("CRoad" +i, (sessionStorage.getItem("CRoad")));
+   localStorage.setItem("CBlock" +i, (sessionStorage.getItem("CBlock")));
+   }
+   
+   location.href = 'Thanks.html';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="CSS/main.css" media="screen" type="text/css" />
+    <meta charset="UTF-8">
+    <title>Login | Signup</title>
+	<link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      <li><a href="order.html"><span class="glyphicon glyphicon-glass"></span> <span class="glyphicon glyphicon-apple"></span> Order</a></li>
+      <li><a href="contactus.html"><span class="glyphicon glyphicon-envelope"></span> Contact us</a></li>
+	  <li><a href="about.html"> <span class="glyphicon glyphicon-exclamation-sign"></span> About</a></li>
+    </ul>
+  </div>
+</nav>
+	<div id="ordertable"></div>
+</head>
+<body>
+
+	<hr>
+	<h2 align="center">Register Form</h2>
+	<br>
+	<div id="msg" style="text-align:center;"></div>
+	<div style="text-align:center;"> 
+ <span class="glyphicon glyphicon-font"></span> <input type="text" id="fName" value="" placeholder="First Name" value="" ><br>
+	<span class="glyphicon glyphicon-bold"></span> <input type="text" id="lName" value="" placeholder="Last Name" ><br>
+	<span class="glyphicon glyphicon-user"></span> <input type="text" id="registerName" value="" placeholder="Username" ><br>
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+  <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>
+	<input type="password" id="registerPassword" value="" placeholder="Password" ><br>
+	<span class="glyphicon glyphicon-home"></span> <input type="text" id="Housen" value="" placeholder="House Number" ><br>
+	<span class="glyphicon glyphicon-road"></span> <input type="text" id="Roadn" value="" placeholder="Road Number" ><br>
+	<span class="glyphicon glyphicon-globe"></span> <input type="text" id="Blockn" value="" placeholder="Block" ><br>
+	<hr>
+	<button name="Register" id="registerButton" class="btn">Register</button>
+	<hr>
+	
+	<h2 align="center">Login Form</h2>
+	<div id="loginmsg"></div>
+	<br>
+	<span class="glyphicon glyphicon-user"></span> <input type="text" id="loginName" value="" placeholder="Username" ><br>
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+  <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>
+<input type="password" id="loginPassword" value="" placeholder="Password" ><br>
+	<hr>
+	<button name="Register" id="loginButton" class="btn">Login</button></div>
+	<hr>
+	
+	<script>
+
+	
+	var users = [{}]
+
+//Register
+document.getElementById('registerButton').onclick = function() {
+
+	var newFirstName = document.getElementById('fName').value
+	var newLastName = document.getElementById('lName').value
+	var newUsername = document.getElementById('registerName').value
+	var newPassword = document.getElementById('registerPassword').value
+	var newHouse = document.getElementById('Housen').value
+	var newRoad = document.getElementById('Roadn').value
+	var newBlock = document.getElementById('Blockn').value
+	users.push({ username: newUsername, password: newPassword, FirstName: newFirstName, LastName: newLastName, House: newHouse, Road: newRoad, Block: newBlock })
+   document.getElementById("msg").innerHTML = "<div class='alert alert-success' role='alert'>Thank you for register, now you can complete your order !</div>";
+  	var newFirstName = document.getElementById('fName').value = ""
+	var newLastName = document.getElementById('lName').value = ""
+	var newUsername = document.getElementById('registerName').value = ""
+	var newPassword = document.getElementById('registerPassword').value = ""
+	var newHouse = document.getElementById('Housen').value = ""
+	var newRoad = document.getElementById('Roadn').value = ""
+	var newBlock = document.getElementById('Blockn').value = ""
+  }
+  
+  
+//Login
+document.getElementById('loginButton').onclick = function() {
+  var username = document.getElementById('loginName').value
+  var password = document.getElementById('loginPassword').value
+  for (var i = 0; i < users.length; i++) {
+    if (username == users[i].username) {
+      if (password == users[i].password) {
+	  
+	  var fullname = users[i].FirstName + " " + users[i].LastName;
+	  alert("Welcome " + fullname);
+	  sessionStorage.setItem("Cfullname", fullname);
+	  sessionStorage.setItem("CHouse", users[i].House);
+	  sessionStorage.setItem("CRoad", users[i].Road);
+	  sessionStorage.setItem("CBlock", users[i].Block);
+	  location.href = "Checkout.html";
+        return
+      } else {
+       
+		      document.getElementById("loginmsg").innerHTML = "<div class='alert alert-danger' role='alert'>Please double check  your password and username and try again!</div>";
+
+      }
+    }
+  }
+
+}
+	</script>
+	
+	
+	
+</body>
+</html>

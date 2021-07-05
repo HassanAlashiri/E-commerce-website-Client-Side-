@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Online Food Festival</title>
+<link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+<meta charset="utf-8" />
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="CSS/order.css" media="screen" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      <li><a href="order.html"><span class="glyphicon glyphicon-glass"></span> <span class="glyphicon glyphicon-apple"></span> Order</a></li>
+      <li><a href="contactus.html"><span class="glyphicon glyphicon-envelope"></span> Contact us</a></li>
+	  <li><a href="about.html"> <span class="glyphicon glyphicon-exclamation-sign"></span> About</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="site">
+	<header id="masthead">
+		<img src="images/logo.png" alt="food festival" class="center"/>
+		<br>
+	</header>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav" id="navbar">
+      <li><a href="#Indian"><strong>Indian</strong></a></li>
+      <li><a href="#Eastern"><strong>Eastern</strong></a></li>
+      <li><a href="#Chinese"><strong>Chinese</strong></a></li>
+	  <li><a href="#Western"><strong>Western</strong></a></li>
+      <li><a href="#Khaleeji"><strong>Khaleeji</strong></a></li>
+
+    </ul>
+  </div>
+</nav>
+	<div id="content">
+		<div id="products">
+			<ul>
+			<div id="Indian"></div>
+			<!--Product1-->
+				<li>
+					<div class="product-image">
+						<img src="images/Chicken_65.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Chicken_65" data-price="2">
+						<h3 class="product-name">Chicken 65</h3>
+						<p class="product-price">2BD</p>
+						
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Chicken 65','Chicken 65 is one of the most popular Indian chicken recipes. It is an appetizer or entree recipe originating in South of India. Basically it is deep fried small (bone in our bone out ) pieces of marinated chiken sauted in super tangy chilli garlic sause.',2)" /></p>
+					</div>
+				
+				</li>
+				<!--Product2-->
+				<li>
+					<div class="product-image">
+						<img src="images/chicken_biryani.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="chicken_biryani" data-price="3.5">
+						<h3 class="product-name">chicken biryani</h3>
+						<p class="product-price">3.5BD</p>
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('chicken biryani','Chicken Biryani is a savory chicken and rice dish that includes layers of chicken rice and aromatics that are steamed together. The bottom layer of rice absorbs all the chicken juices as it cooks giving it a tender texture and rich flavor while the top layer of rice turns out white and fluffy.',3.5)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product3-->
+				<li>
+					<div class="product-image">
+						<img src="images/chicken_lollipop.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="chicken_lollipop" data-price="1.5">
+						<h3 class="product-name">chicken lollipop</h3>
+						<p class="product-price">1.5BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('chicken lollipop','Chicken lollipop is an hors doeuvre popular in Indo-Chinese cuisine. Chicken lollipop is essentially a frenched chicken winglet wherein the meat is cut loose from the bone end and pushed down creating a lollipop appearance. It is usually served hot with Szechuan sauce.',1.5)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product4-->
+					<li>
+					<div class="product-image">
+						<img src="images/butter_chicken.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="butter_chicken" data-price="4">
+						<h3 class="product-name">butter chicken</h3>
+						<p class="product-price">4BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('butter chicken','Butter chicken originated from Northern India in 1948. Created by Kundan Lal Gujral you may notice that Butter Chicken (known as murgh makhani — chicken with butter) is similar to British tikka masala. Prepared in a buttery gravy with the addition of cream gives the curry sauce a silky smooth rich texture.',4)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product5-->
+					<li>
+					<div class="product-image">
+						<img src="images/Chicken_Tikka_Masala.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Chicken_Masala" data-price="4.5">
+						<h3 class="product-name">Chicken Masala</h3>
+						<p class="product-price">4.5BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Chicken Masala','Chicken masala is a simple Indian dish made with chicken spices herbs onions and tomatoes. ',4.5)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product6-->
+					<li>
+					<div class="product-image">
+						<img src="images/Dal_Makhani.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Dal_Makhani" data-price="3">
+						<h3 class="product-name">Dal Makhani</h3>
+						<p class="product-price">3BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Dal Makhani','Creamy & buttery Dal Makhani is one of Indias most special and popular dal. Black lentils are cooked with lot of butter and cream making it a special dish. This dal has whole black lentils cooked with butter and cream and simmered on low heat for that unique flavor. It tastes best with garlic naan.',3)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product7-->
+					<li>
+					<div class="product-image">
+						<img src="images/malai_kofta.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="malai_kofta" data-price="2.5">
+						<h3 class="product-name">malai kofta</h3>
+						<p class="product-price">2.5BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('malai kofta','Malai Kofta is a very popular Indian vegetarian dish where balls (kofta) made of potato and paneer are deep fried and served with a creamy and spiced tomato based curry. ',2.5)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product8-->
+					<li>
+					<div class="product-image">
+						<img src="images/jadoh.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="jadoh" data-price="1.5">
+						<h3 class="product-name">jadoh</h3>
+						<p class="product-price">1.5BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('jadoh','Jadoh is a very popular dish among the Khasi community of Meghalaya. Jadoh is red rice cooked with generous amounts of  meat. Sometimes it is also cooked with chicken or fish. A mix of green chilies onions ginger turmeric black pepper and bay leaves is made.',1.5)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product9-->
+					<li>
+					<div class="product-image">
+						<img src="images/Curry.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Curry" data-price="2.5">
+						<h3 class="product-name">Curry</h3>
+						<p class="product-price">2.5BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Curry',' Curry is an Indian gravy or sauce that is used in tandem with meat tofu or vegetables. Its served rice most popularly Basmati rice and contains many different kinds of spices. Depending on what your recipe calls for you could have a mild curry or a curry thats super spicy.',2.5)"  /></p>
+						
+					</div>
+				</li>
+				
+				<!--Product10-->
+					<li>
+					<div id="Eastern"></div>
+					<div class="product-image">
+						<img src="images/Hummus.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Hummus" data-price="1.3">
+						<h3 class="product-name">Hummus</h3>
+						<p class="product-price">1.3BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Hummus','Hummus is an incredibly popular Middle Eastern dip and spread. It is typically made by blending chickpeas (garbanzo beans) tahini (ground sesame seeds) olive oil lemon juice and garlic in a food processor.',1.3)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product11-->
+					<li>
+					<div class="product-image">
+						<img src="images/Tabbouleh.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Tabbouleh" data-price="1.5">
+						<h3 class="product-name">Tabbouleh</h3>
+						<p class="product-price">1.5BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Tabbouleh','Tabbouleh is a Levantine vegetarian salad made mostly of finely chopped parsley with tomatoes mint onion bulgur (soaked not cooked) and seasoned with olive oil lemon juice salt and sweet pepper.',1.5)"  /></p>
+						
+					</div>
+				</li>
+						<!--Product12-->
+					<li>
+					<div class="product-image">
+						<img src="images/Falafel.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Falafel" data-price="1.1">
+						<h3 class="product-name">Falafel (6PCS)</h3>
+						<p class="product-price">1.1BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Falafel (6PCS)','Falafel a staple Middle Eastern dish—and a popular street food around the world—that consists of fried spiced balls or patties of ground chickpeas or fava beans (or a mixture of both) stuffed into a pita or wrapped in laffa bread with hot sauce tahini sauce and generally some saladlike combination of tomato lettuce.',1.1)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product13-->
+					<li>
+					<div class="product-image">
+						<img src="images/Shawarma.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Shawarma" data-price="1">
+						<h3 class="product-name">Shawarma</h3>
+						<p class="product-price">1BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Shawarma','Shawarma is thinly sliced cuts of meat like chicken beef goat lamb and sometimes turkey rolled into a large piece of flatbread or pita that has been steamed or heated. Inside the pita foods like hummus tahini pickles vegetables and even french fries are added.',1)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product14-->
+					<li>
+					<div class="product-image">
+						<img src="images/grape_leaves.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="grape_leaves" data-price="1.4">
+						<h3 class="product-name">grape leaves (5 PCS)</h3>
+						<p class="product-price">1.4BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('grape leaves (5 PCS)','Grape leaves are stuffed with a tasty meat and rice mixture seasoned with warm spices (allspice and cumin) and loaded with fresh herbs in the form of parsley dill and mint. Then once stuffed the grape leaves are cooked in a tasty lemony broth.',1.4)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product15-->
+					<li>
+					<div class="product-image">
+						<img src="images/KIBBEH.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="KIBBEH" data-price="1.6">
+						<h3 class="product-name">KIBBEH (6 PCS)</h3>
+						<p class="product-price">1.6BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('KIBBEH (6 PCS)','Kibbeh nayyeh is a raw dish made from a mixture of bulgur very finely minced lamb or beef similar to steak tartare and Middle Eastern spices served on a platter frequently as part of a meze in Lebanon and Syria garnished with mint leaves and olive oil and served with green onions or scallions green hot peppers.',1.6)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product16-->
+					<li>
+					<div id="Chinese"></div>
+					<div class="product-image">
+						<img src="images/Noodles.jpeg" alt="" />
+					</div>
+					<div class="product-description" data-name="Noodles" data-price="1.8">
+						<h3 class="product-name">Noodles</h3>
+						<p class="product-price">1.8BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Noodles','Noodle a cooked egg-and-flour paste prominent in Asian cuisine generally distinguished from pasta by its elongated ribbonlike form. Noodles are commonly used to add body and flavour to broth soups. They are commonly boiled or sautéed and served with sauces and meats or baked in casseroles.',1.8)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product17-->
+					<li>
+					<div class="product-image">
+						<img src="images/Spring_Rolls.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Spring_Rolls" data-price="1.9">
+						<h3 class="product-name">Spring Rolls</h3>
+						<p class="product-price">1.9BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Spring Rolls','Spring Rolls are the vegetarian super light crispy and tender vegetarian appetizer cousin of the traditional egg roll. Spring Rolls are the perfect dim sum appetizer alongside Crab Rangoon Shrimp Tempura and Potstickers.',1.9)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product18-->
+					<li>
+					<div class="product-image">
+						<img src="images/mapo_tofu.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="mapo_tofu" data-price="2.3">
+						<h3 class="product-name">mapo tofu</h3>
+						<p class="product-price">2.3BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('mapo tofu','Mapo tofu is a popular Chinese dish from Sichuan province. It consists of tofu set in a spicy sauce typically a thin oily and bright red suspension based on douban (fermented broadbean and chili paste) and douchi (fermented black beans) along with minced meat usually beef.',2.3)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product19-->
+					<li>
+					<div class="product-image">
+						<img src="images/Wonton.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Wonton" data-price="3.2">
+						<h3 class="product-name">Wonton</h3>
+						<p class="product-price">3.2BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Wonton','Wonton is a type of Chinese dumpling. They come in small parcels and are available in many forms: steamed deep-fried or in wonton soup. The inside contains a savory meat or seafood filling and a special yellow color and rectangle wrapper wraps the filling inside a wonton.',3.2)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product20-->
+					<li>
+					<div class="product-image">
+						<img src="images/jiaozi.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="jiaozi" data-price="2.2">
+						<h3 class="product-name">jiaozi</h3>
+						<p class="product-price">2.2BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('jiaozi','Jiaozi typically consist of a ground meat and/or vegetable filling wrapped into a thinly rolled piece of dough which is then sealed by pressing the edges together. Finished jiaozi can be boiled steamed  or pan-fried and are traditionally served with a black vinegar and sesame oil dip. They can also be served with soup.',2.2)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product21-->
+				<li>
+					<div class="product-image">
+						<img src="images/fried_rice.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="fried_rice" data-price="3.4">
+						<h3 class="product-name">fried rice</h3>
+						<p class="product-price">3.4BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('fried rice','Fried rice is a dish of cooked rice that has been stir-fried in a wok or a frying pan and is usually mixed with other ingredients such as eggs vegetables seafood or meat.',3.4)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product22-->
+				<li>
+				<div id="Western"></div>
+					<div class="product-image">
+						<img src="images/garlic_bread.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="garlic_bread" data-price="1.2">
+						<h3 class="product-name">garlic bread (4 pcs)</h3>
+						<p class="product-price">1.2BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('garlic bread (4 pcs)','Garlic bread (also called garlic toast) consists of bread (usually a baguette or sour dough like a ciabatta) topped with garlic and olive oil or butter and may include additional herbs such as oregano or chives. It is then either grilled or broiled until toasted or baked in a conventional or bread oven.',1.2)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product23-->
+				<li>
+					<div class="product-image">
+						<img src="images/pizza.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="pizza" data-price="3.2">
+						<h3 class="product-name">pizza</h3>
+						<p class="product-price">3.2BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('pizza','Pizza dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil oregano tomato olives mozzarella or other cheese and many other ingredients baked quickly—usually in a commercial setting using a wood-fired oven heated to a very high temperature—and served hot.',3.2)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product24-->
+				<li>
+					<div class="product-image">
+						<img src="images/pasta.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="pasta" data-price="3.6">
+						<h3 class="product-name">pasta</h3>
+						<p class="product-price">3.6BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('pasta','Pasta is a type of food typically made from an unleavened dough of wheat flour mixed with water or eggs and formed into sheets or other shapes then cooked by boiling or baking.',3.6)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product25-->
+				<li>
+					<div class="product-image">
+						<img src="images/chicken_fingers.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="chicken_fingers" data-price="2.2">
+						<h3 class="product-name">chicken fingers (5Pcs)</h3>
+						<p class="product-price">2.2BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('chicken fingers (5Pcs)','Chicken fingers are chicken meat prepared from the pectoralis minor muscles of the animal. These strips of white meat are located on either side of the breastbone under the breast meat.',2.2)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product26-->
+				<li>
+					<div class="product-image">
+						<img src="images/cheese_sticks.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="cheese_sticks" data-price="1.4">
+						<h3 class="product-name">cheese sticks (5Pcs)</h3>
+						<p class="product-price">1.4BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('cheese sticks (5Pcs)','Cheese sticks made from mild varieties of semi-soft cheese a cheese stick is a food product that has been formed into a rod-like individual serving of cheese.',1.4)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product27-->
+				<li>
+					<div class="product-image">
+						<img src="images/Spaghetti.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="Spaghetti" data-price="1.9">
+						<h3 class="product-name">Spaghetti</h3>
+						<p class="product-price">1.9BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('Spaghetti','Spaghetti is a long thin solid cylindrical pasta. Italian spaghetti is typically made from durum wheat semolina. Usually the pasta is white because refined flour is used but whole wheat flour may be added.',1.9)"  /></p>
+						
+					</div>
+				</li>
+				
+					<!--Product28-->
+				<li>
+				<div id="Khaleeji"></div>
+					<div class="product-image">
+						<img src="images/harees.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="harees" data-price="1.2">
+						<h3 class="product-name">harees</h3>
+						<p class="product-price">1.2BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('harees','Harees, Jareesh is a dish of boiled cracked or coarsely-ground wheat mixed with meat and seasoned. Its consistency varies between a porridge and a dumpling.',1.2)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product29-->
+				<li>
+				<div id="Khaleeji"></div>
+					<div class="product-image">
+						<img src="images/majboos_chicken.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="majboos_chicken" data-price="3.2">
+						<h3 class="product-name">majboos chicken</h3>
+						<p class="product-price">3.2BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('majboos chicken','Chicken Majboos is an Arabic dish that is a spiced rice and herb chicken. It is considered a national dish of Kuwait and it is served with tomato garlic sauce called Daqoos.',3.2)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product30-->
+				<li>
+				<div id="Khaleeji"></div>
+					<div class="product-image">
+						<img src="images/majboos_hamour.png" alt="" />
+					</div>
+					<div class="product-description" data-name="majboos_hamour" data-price="3.8">
+						<h3 class="product-name">majboos hamour</h3>
+						<p class="product-price">3.8BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('majboos hamour','Majboos hamour is a traditional khaleeji majboos. It is cooked either with fish mutton or chicken.',3.8)"  /></p>
+						
+					</div>
+				</li>
+					<!--Product31-->
+				<li>
+				<div id="Khaleeji"></div>
+					<div class="product-image">
+						<img src="images/mandei_chicken.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="mandei_chicken" data-price="3.1">
+						<h3 class="product-name">mandei chicken</h3>
+						<p class="product-price">3.1BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('mandei chicken','The Arabian Chicken Mandi Recipe is a delicious preparation of chicken cooked with mandi powder served over a layer of basmati rice. It is packed with flavours and taste of the perfect blend of spices.',3.1)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product32-->
+				<li>
+				<div id="Khaleeji"></div>
+					<div class="product-image">
+						<img src="images/mandei_beef.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="mandei_chicken" data-price="3.8">
+						<h3 class="product-name">mandei beef</h3>
+						<p class="product-price">3.8BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('mandei beef','Mandi is Arabic fragrant rice with very tender meat. The most authentic way first cook meat with Mandi is Arabian fragrant rice with meat.',3.8)"  /></p>
+						
+					</div>
+				</li>
+				<!--Product33-->
+				<li>
+				<div id="Khaleeji"></div>
+					<div class="product-image">
+						<img src="images/bokhari_chicken.jpg" alt="" />
+					</div>
+					<div class="product-description" data-name="bokhari_chicken" data-price="3.2">
+						<h3 class="product-name">bokhari chicken</h3>
+						<p class="product-price">3.2BD</p>
+							
+							<p><input type="submit" value="Add to cart" class="btn" onclick="AddtoCart('bokhari chicken','A Saudi Arabian speciality bukhari rice is fragrant rice loaded with flavours and spices. Usually served with the perfectly cooked roast chicken.',3.2)"  /></p>
+						
+					</div>
+				</li>
+			</ul>
+		</div>
+
+
+	</div>
+	<hr>
+	   <div id="couponmsg"></div>
+            <table cellpadding="4" cellspacing="4" border="3" id="orderedProductsTbl" class="ordertable">
+                <thead>
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            Description
+                        </td>
+                        <td>
+                            Price
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="orderedProductsTblBody">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                         <td colspan="3" align="right" id="cart_total">
+
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </td>
+    </tr>
+</table>
+<br>
+						<p style="display:none;" id="totalp"></p>
+						<p><input type="text" placeholder="Coupon Code" value="" id="coupon"/></p>
+						<p><input type="submit" value="Apply" class="confirm" onclick="" id="apply"/></p>	
+						<p><input type="submit" value="Confirm" class="confirm" onclick="" id="confirm"/></p>
+											
+
+<div align="center">		
+		<a id ="myBtn" href="#navbar">
+		<img src="images/top.png" alt="" />
+</div>
+<div align="center">		
+		<a id ="bottom" href="#orderedProductsTbl">
+		<img src="images/cart.jpg" alt="" />
+</div>
+
+<script src="JS/order.js"></script>
+<script>
+<!--Coupon Code "Food9 or FOOD8" 5% -->
+document.getElementById('apply').onclick = function() {
+var couponcode = document.getElementById('coupon').value;
+
+    if (document.getElementById('coupon').value == '') {
+      document.getElementById("couponmsg").innerHTML = "<div class='alert alert-danger' role='alert'>Please enter a coupon code!</div>";
+		  } else {
+       
+       if(document.getElementById('coupon').value == 'FOOD9' || document.getElementById('coupon').value == 'FOOD8' )
+	   document.getElementById("cart_total").innerHTML = "Total : " + (document.getElementById("totalp").innerHTML -  document.getElementById("totalp").innerHTML * 5 / 100) + "BD";
+	  document.getElementById("couponmsg").innerHTML = "<div class='alert alert-success' role='alert'>Thank you for using our coupon code!</div>";
+    }
+
+  }
+  
+  document.getElementById('confirm').onclick = function() {
+  var order = $('.ordertable')[0].outerHTML;
+sessionStorage.setItem("order", order);
+location.href = "LoginSignup.html";
+}
+
+  </script>
+</body>
+</html>	
